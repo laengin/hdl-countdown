@@ -48,7 +48,7 @@ const Today = () => {
 
   return (
     <div className="Today container">
-      <h2>Heute</h2>
+      <p>Heute</p>
       <div className="row">
         <div className="col-md-4">
           <p className="text-md-start">{formatWeekDay(date)}</p>

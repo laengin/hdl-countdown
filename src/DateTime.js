@@ -44,7 +44,7 @@ function DateTime(props) {
 
   return (
     <div className="DateTime container">
-      <h2>{props.title}</h2>
+      <p>{props.title}</p>
       <div className="row">
         <div className="col-md-4">
           <p className="text-md-start">{formatWeekDay(date)}</p>

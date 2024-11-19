@@ -15,14 +15,14 @@ export default function App() {
   return (
     <div className="App wrapper">
       <Heading heading="Hdl's Countdown"/>
-      <DateTime title="Anfang" date={startDate} />
+      <DateTime title="Eintritt ins Arbeitsleben..." date={startDate} />
       <Today />
       <TimeDifference
         startText="Das bedeutet noch..."
         endText="...bis zur Freistellungsphase."
         targetDateTime={targetDate}
       />
-      <DateTime title="Ende" date={targetDate} />
+      <DateTime title="...Beginn Freistellungsphase ATZ" date={targetDate} />
     </div>
   );
 }
