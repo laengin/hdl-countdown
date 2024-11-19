@@ -45,10 +45,9 @@ code {
   border: solid, 2px;
   border-color: #45a29f;
   color: #66fcf1;
-  font-size: 1.8rem;
   padding-top: 10px;
 }
 
 .ClockFontSize{
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
