@@ -85,12 +85,12 @@ const TimeDifference = (props) => {
         <p>{props.startText}</p>
       </div>
       <div className="row">
-          <p>
+          <p className="ClockFontSize">
             {timeDifference.weeks > 0 && `${timeDifference.weeks} Wochen `}
-            {timeDifference.days > 0 && `${timeDifference.days % 7} Tage und `}
-            {timeDifference.hours.toString().padStart(2, "0")}:
-            {timeDifference.minutes.toString().padStart(2, "0")}:
-            {timeDifference.seconds.toString().padStart(2, "0")}
+            {timeDifference.days > 0 && `${timeDifference.days % 7} Tage und  `}
+            {timeDifference.hours.toString().padStart(2, "0")} h {" "}: {" "}
+            {timeDifference.minutes.toString().padStart(2, "0")} m {" "}: {" "}
+            {timeDifference.seconds.toString().padStart(2, "0")} s
           </p>
       </div>
       <div>
