@@ -1,9 +1,8 @@
-import React from "react";
 
-function Heading() {
+function Heading(props) {
   return (
     <div className="Heading">
-      <h1>HDL's Countdown</h1>
+      <h1>{props.heading}</h1>
     </div>
   );
 }

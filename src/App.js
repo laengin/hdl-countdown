@@ -1,5 +1,5 @@
-import React from "react";
-import "./index.css";import Heading from "./Heading";
+import "./index.css";
+import Heading from "./Heading";
 import DateTime from "./DateTime";
 import Today from "./Today";
 import TimeDifference from "./TimeDifference";
@@ -14,7 +14,7 @@ const startDate = "1987-10-01T08:00:00";
 export default function App() {
   return (
     <div className="App wrapper">
-      <Heading />
+      <Heading heading="Hdl's Countdown"/>
       <DateTime title="Anfang" date={startDate} />
       <Today />
       <TimeDifference

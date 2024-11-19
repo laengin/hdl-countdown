@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
+
 const TimeDifference = (props) => {
   const [timeDifference, setTimeDifference] = useState(
     getTimeDifference(props.targetDateTime)
@@ -10,7 +11,6 @@ const TimeDifference = (props) => {
     const timerId = setInterval(() => {
       setTimeDifference(getTimeDifference(props.targetDateTime));
     }, 1000);
-
     return () => clearInterval(timerId);
   }, [props.targetDateTime]);
 
@@ -33,6 +33,7 @@ const TimeDifference = (props) => {
     const weeks = Math.floor(days / 7);
     return { days, weeks, months, hours, minutes, seconds };
   }
+  
 
   function calculateWeekDifference(startDate, endDate) {
     if (

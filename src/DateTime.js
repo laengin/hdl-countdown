@@ -11,6 +11,7 @@ function DateTime(props) {
     "Freitag",
     "Samstag",
   ];
+  /*
   const month = [
     "Januar",
     "Februar",
@@ -25,7 +26,7 @@ function DateTime(props) {
     "November",
     "Dezember",
   ];
-
+ */
   const formatWeekDay = (date) => {
     return weekday[date.getDay()];
   };
