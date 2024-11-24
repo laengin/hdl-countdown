@@ -3,6 +3,8 @@ import Heading from "./Heading";
 import DateTime from "./DateTime";
 import Today from "./Today";
 import TimeDifference from "./TimeDifference";
+import WorkDone from "./WorkDone";
+
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 // Bootstrap Bundle JS
@@ -17,6 +19,11 @@ export default function App() {
       <Heading heading="Hdl's Countdown"/>
       <DateTime title="Eintritt ins Arbeitsleben..." date={startDate} />
       <Today />
+      <WorkDone 
+        startText="Bisher waren das ..."
+        endText="...in Arbeit"
+        startDateTime={startDate}
+        />
       <TimeDifference
         startText="Das bedeutet noch..."
         endText="...bis zur Freistellungsphase."
