@@ -66,7 +66,7 @@ function calculateDateDifference(startDate, endDate) {
     newStart.setSeconds(0);
     newStart.setMilliseconds(0);
         */
-    console.log(newStart);
+    //console.log(newStart);
 
 
     const adjDiffInMs = end - newStart;
@@ -102,6 +102,10 @@ function calculateDateDifference(startDate, endDate) {
   ) {
     return <div style={{ color: "red" }}>Der Zielzeitpunkt ist erreicht!</div>;
   }
+  const strMonat = workDone.months === 1? "Monat" : "Monate";
+  const strWeek = workDone.weeks ===1? "Woche" : "Wochen";
+  const strYear = workDone.years ===1? "Jahr" : "Jahre";
+  const strDay = workDone.days ===1? "Tag" : "Tage";
 
   return (
     <div className="TimeDifference container">
@@ -110,9 +114,9 @@ function calculateDateDifference(startDate, endDate) {
       </div>
       <div className="row">
           <p className="ClockFontSize">
-            {workDone.years > 0 && `${workDone.years} Jahre `}
-            {workDone.months > 0 && `${workDone.months} Monate `}
-            {workDone.weeks > 0 && `${workDone.weeks} Wochen `}
+            {workDone.years > 0 && `${workDone.years} ${strYear} `}
+            {workDone.months > 0 && `${workDone.months} ${strMonat} `}
+            {workDone.weeks > 0 && `${workDone.weeks} ${strWeek} `}
             {workDone.days > 0 && `${workDone.days % 7} Tage und  `}
             {workDone.hours.toString().padStart(2, "0")} h {" "}: {" "}
             {workDone.minutes.toString().padStart(2, "0")} m {" "}: {" "}
