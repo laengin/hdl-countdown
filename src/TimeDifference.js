@@ -49,7 +49,7 @@ function calculateDateDifference(startDate, endDate) {
     const end = new Date(endDate);
 
     // Zeitdifferenz in Millisekunden
-    const diffInMs = end - start;
+    // const diffInMs = end - start;
 
     // Monate berechnen
     let months = (end.getFullYear() - start.getFullYear()) * 12;
@@ -75,10 +75,10 @@ function calculateDateDifference(startDate, endDate) {
     newStart.setSeconds(0);
     newStart.setMilliseconds(0);
         */
-    console.log(newStart);
+    // console.log(newStart);
 
-
-    const adjDiffInMs = end - newStart;
+    const adjDiffInMs = Math.max(end - newStart, 0); //Verhindert negative Werte
+  
     //  Rest Tage berechnen
     // const days = diffInMs / (1000 * 60 * 60 * 24);
     const days =  Math.floor(adjDiffInMs / (1000 * 60 * 60 * 24));
@@ -89,8 +89,9 @@ function calculateDateDifference(startDate, endDate) {
     // restliche Zeit berechnen
     const seconds = Math.floor((adjDiffInMs / 1000) % 60);
     const minutes = Math.floor((adjDiffInMs / (1000 * 60)) % 60);
-    const hours = Math.floor((adjDiffInMs / (1000 * 60 * 60)) % 24);
-    // hours = Math.floor(hours + (end.getTimezoneOffset() / -60));
+    let hours = Math.floor((adjDiffInMs / (1000 * 60 * 60)) % 24);
+    // console.log(newStart.getTimezoneOffset());
+    hours = Math.floor(hours + (newStart.getTimezoneOffset() / -60));
 
 
     return {
