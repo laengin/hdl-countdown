@@ -75,23 +75,23 @@ function calculateDateDifference(startDate, endDate) {
     newStart.setSeconds(0);
     newStart.setMilliseconds(0);
         */
-    // console.log(newStart);
+    console.log(newStart);
 
     const adjDiffInMs = Math.max(end - newStart, 0); //Verhindert negative Werte
   
     //  Rest Tage berechnen
     // const days = diffInMs / (1000 * 60 * 60 * 24);
     const days =  Math.floor(adjDiffInMs / (1000 * 60 * 60 * 24));
-
+    console.log(days);
     // restliche Wochen berechnen
     const weeks = Math.floor(days / 7);
-
+    console.log(weeks);
     // restliche Zeit berechnen
     const seconds = Math.floor((adjDiffInMs / 1000) % 60);
     const minutes = Math.floor((adjDiffInMs / (1000 * 60)) % 60);
-    let hours = Math.floor((adjDiffInMs / (1000 * 60 * 60)) % 24);
+    const hours = Math.floor((adjDiffInMs / (1000 * 60 * 60)) % 24);
     // console.log(newStart.getTimezoneOffset());
-    hours = Math.floor(hours + (newStart.getTimezoneOffset() / -60));
+    // hours = Math.floor(hours + (start.getTimezoneOffset() / -60));
 
 
     return {
