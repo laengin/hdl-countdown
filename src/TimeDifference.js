@@ -54,7 +54,7 @@ function calculateDateDifference(startDate, endDate) {
     // Monate berechnen
     let months = (end.getFullYear() - start.getFullYear()) * 12;
     months += end.getMonth() - start.getMonth();
-    if (end.getDate() < start.getDate()) {
+    if (end.getDate() <= start.getDate()) {
         months--; // Korrigieren, wenn der Tag im Enddatum kleiner ist
     }
 
