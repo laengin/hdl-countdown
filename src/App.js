@@ -10,26 +10,26 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // Bootstrap Bundle JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-const targetDate = "2025-03-31T12:00:00";
-const startDate = "1987-10-01T08:00:00";
+const targetDate = "2026-07-1T00:00:01";
+const startDate = "2025-04-01T00:00:01";
 
 export default function App() {
   return (
     <div className="App wrapper">
       <Heading heading="Hdl's Countdown"/>
-      <DateTime title="Eintritt ins Arbeitsleben" date={startDate} />
+      <DateTime title="Eintritt in die ATZ aktive Passiv-Phase" date={startDate} />
       <Today />
       <WorkDone 
         startText="Bisher waren das ..."
-        endText="...in Arbeit..."
+        endText="...ATZ aktive Passiv-Phase..."
         startDateTime={startDate}
         />
       <TimeDifference
         startText="...und sind noch..."
-        endText="...bis zur Freistellungsphase."
+        endText="...bis zur Rente."
         targetDateTime={targetDate}
       />
-      <DateTime title="Beginn Freistellungsphase ATZ" date={targetDate} />
+      <DateTime title="Beginn Rente" date={targetDate} />
     </div>
   );
 }
